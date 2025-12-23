@@ -44,6 +44,7 @@ Coverage results are collected into UCDB files and merged automatically.
 * HTML coverage report location:
 
 sim/cov/html/index.html
+
 <img width="443" height="214" alt="image" src="https://github.com/user-attachments/assets/fb4f90b6-5d8f-4949-a432-b49ffcd9b0a7" />
 
 
