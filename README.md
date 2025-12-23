@@ -26,14 +26,14 @@ Reset behavior
 
 The following tests are implemented and can be run individually or as a regression:
 
-Test Name	Description
-reset_dut_test	Verify DUT reset behavior
-write_test	Single write transactions
-read_test	Single read transactions
-wr_rd_test	Mixed write-read operations
-wr_bulk_rd_bulk_test	Burst write followed by burst read
-write_err_test	Invalid write access
-read_err_test	Invalid read access
+Test Name  	Description
+reset_dut_test  	Verify DUT reset behavior
+write_test	Single   write transactions
+read_test	Single   read transactions
+wr_rd_test	Mixed   write-read operations
+wr_bulk_rd_bulk_test  	Burst write followed by burst read
+write_err_test	  Invalid write access
+read_err_test	  Invalid read access
 
 * Functional Coverage
 
@@ -45,9 +45,9 @@ Read / write operation coverage
 
 Error access coverage
 
-* Coverage results are collected into UCDB files and merged automatically.
+Coverage results are collected into UCDB files and merged automatically.
 
- HTML coverage report location:
+* HTML coverage report location:
 
 sim/cov/html/index.html
 
