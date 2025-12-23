@@ -26,14 +26,8 @@ Reset behavior
 
 The following tests are implemented and can be run individually or as a regression:
 
-Test Name  	Description
-reset_dut_test  	Verify DUT reset behavior
-write_test	Single   write transactions
-read_test	Single   read transactions
-wr_rd_test	Mixed   write-read operations
-wr_bulk_rd_bulk_test  	Burst write followed by burst read
-write_err_test	  Invalid write access
-read_err_test	  Invalid read access
+<img width="541" height="322" alt="image" src="https://github.com/user-attachments/assets/1f92bf34-3dfc-4024-a798-11fb9f2c18dc" />
+
 
 * Functional Coverage
 
