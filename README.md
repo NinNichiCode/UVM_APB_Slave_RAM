@@ -1,11 +1,11 @@
-*Overview
+* Overview
 
 This repository contains a complete UVM-based verification environment for an APB RAM design.
 The project demonstrates how to build a structured, reusable, and coverage-driven UVM testbench, executed using QuestaSim under Cygwin on Windows.
 
 The goal of this project is to verify the functional correctness, error handling, and corner cases of an APB-compliant RAM through multiple directed and constrained-random tests.
 
-*Design Under Test (DUT)
+* Design Under Test (DUT)
 
 Module: apb_ram.v
 
@@ -22,7 +22,7 @@ Protocol error handling
 Reset behavior
 
 
-*Implemented Tests
+* Implemented Tests
 
 The following tests are implemented and can be run individually or as a regression:
 
@@ -35,7 +35,7 @@ wr_bulk_rd_bulk_test	Burst write followed by burst read
 write_err_test	Invalid write access
 read_err_test	Invalid read access
 
-*Functional Coverage
+* Functional Coverage
 
 Address coverage
 
@@ -45,7 +45,7 @@ Read / write operation coverage
 
 Error access coverage
 
-*Coverage results are collected into UCDB files and merged automatically.
+* Coverage results are collected into UCDB files and merged automatically.
 
  HTML coverage report location:
 
