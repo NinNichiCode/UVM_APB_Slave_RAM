@@ -19,11 +19,4 @@ module top;
     run_test("test");
    end
   
-  
-  initial begin
-    $dumpfile("dump.vcd");
-    $dumpvars;
-  end
- 
-  
 endmodule
