@@ -82,7 +82,6 @@ interface apb_if();
 
   // ==================================================
   // Coverage
-  // ==================================================
 
   cover_psel:        cover property (@(posedge pclk) disable iff (!presetn) psel);
   cover_write:       cover property (@(posedge pclk) disable iff (!presetn) psel && penable && pwrite);
