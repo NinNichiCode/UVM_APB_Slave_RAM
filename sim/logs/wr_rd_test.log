@@ -1,5 +1,5 @@
-# vsim -c -coverage top "+UVM_TESTNAME=wr_rd_test" -voptargs="+acc" -l logs/wr_rd_test.log -do "coverage save -onexit cov/wr_rd_test.ucdb; run -all; quit -f" 
-# Start time: 16:34:14 on Dec 23,2025
+# vsim -c -coverage top "+UVM_TESTNAME=wr_rd_test" -voptargs="+acc" -assertdebug -l logs/wr_rd_test.log -do "coverage save -onexit cov/wr_rd_test.ucdb; run -all; quit" 
+# Start time: 17:27:00 on Jan 15,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
@@ -1911,5 +1911,5 @@
 # ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 36110 ns  Iteration: 62  Instance: /top
 # Saving coverage database on exit...
-# End time: 16:34:18 on Dec 23,2025, Elapsed time: 0:00:04
+# End time: 17:27:05 on Jan 15,2026, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0

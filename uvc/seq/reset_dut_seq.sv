@@ -17,13 +17,14 @@ class reset_dut_seq extends uvm_sequence#(transaction);
         tr.addr_c_err.constraint_mode(0);
         
         start_item(tr);
-        assert(tr.randomize);
-        tr.op = rst;
-        finish_item(tr);
+        assert(tr.randomize() with {
+            op == rst;
+        });
+        finish_item(tr);   
 
         #20;
         start_item(tr);
-        assert(tr.randomize);
+        assert(tr.randomize());
         finish_item(tr);
       end
   endtask

@@ -41,7 +41,7 @@ class apb_ram_driver extends uvm_driver #(transaction);
          seq_item_port.get_next_item(tr);
      
      
-                   if(tr.op ==  rst)
+                   if(tr.op ==  transaction::rst)
                           begin
                             vif.presetn   <= 1'b0;
                             vif.paddr     <= 'h0;
@@ -52,7 +52,7 @@ class apb_ram_driver extends uvm_driver #(transaction);
                           @(posedge vif.pclk);  
                           end
  
-                  else if(tr.op == writed)
+                  else if(tr.op == transaction::writed)
                           begin
                             vif.psel    <= 1'b1;
                             vif.paddr   <= tr.PADDR;
@@ -67,7 +67,7 @@ class apb_ram_driver extends uvm_driver #(transaction);
                             tr.PSLVERR   = vif.pslverr;
                             
                           end
-                      else if(tr.op ==  readd)
+                      else if(tr.op ==  transaction::readd)
                           begin
                             vif.psel    <= 1'b1;
                             vif.paddr   <= tr.PADDR;

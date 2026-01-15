@@ -24,7 +24,7 @@ virtual task run_phase(uvm_phase phase);
         @(posedge vif.pclk);
         if (!vif.presetn) begin
             transaction rst_tr = transaction::type_id::create("rst_tr");
-            rst_tr.op = rst;
+            rst_tr.op = transaction::rst;
             item_send_port.write(rst_tr);
         end
         else if (vif.psel && vif.penable && vif.pready) begin
@@ -32,7 +32,7 @@ virtual task run_phase(uvm_phase phase);
             
             collected_tr.PADDR   = vif.paddr;
             collected_tr.PWRITE  = vif.pwrite;
-            collected_tr.op      = (vif.pwrite) ? writed : readd;
+            collected_tr.op      = (vif.pwrite) ? transaction::writed : transaction::readd;
             collected_tr.PSLVERR = vif.pslverr; 
             
             if (vif.pwrite) 

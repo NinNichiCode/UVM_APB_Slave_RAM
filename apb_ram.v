@@ -98,7 +98,6 @@ module apb_ram (
           pslverr <= 1'b0;
         end
         
-  
       
       default : state <= idle;
    

@@ -1,7 +1,7 @@
 
-typedef enum bit [1:0]   {readd = 0, writed = 1, rst = 2} oper_mode;
-
 class transaction extends uvm_sequence_item;
+
+    typedef enum bit [1:0]   {readd = 0, writed = 1, rst = 2} oper_mode;
     rand oper_mode      op;
     rand bit            PWRITE;
     rand bit [31:0]   PWDATA;

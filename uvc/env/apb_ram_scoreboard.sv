@@ -4,7 +4,7 @@ class apb_ram_scoreboard extends uvm_scoreboard;
  
   uvm_analysis_imp#(transaction,apb_ram_scoreboard) item_recv_imp;
   bit [31:0] arr[32] = '{default:0};
-  bit [31:0] addr    = 0;
+  // bit [31:0] addr    = 0;
   bit [31:0] data_rd = 0;
  
     function new(input string inst = "apb_ram_scoreboard", uvm_component parent = null);
@@ -18,11 +18,11 @@ class apb_ram_scoreboard extends uvm_scoreboard;
     
     
   virtual function void write(transaction tr);
-    if(tr.op == rst)
+    if(tr.op == transaction::rst)
               begin
                 `uvm_info("SCO", "SYSTEM RESET DETECTED", UVM_NONE);
               end  
-    else if (tr.op == writed)
+    else if (tr.op == transaction::writed)
       begin
             if(tr.PSLVERR == 1'b1)
                 begin
@@ -34,7 +34,7 @@ class apb_ram_scoreboard extends uvm_scoreboard;
                   `uvm_info("SCO", $sformatf("DATA WRITE OP  addr:%0d, wdata:%0d arr_wr:%0d",tr.PADDR,tr.PWDATA,  arr[tr.PADDR]), UVM_NONE);
                 end
       end
-    else if (tr.op == readd)
+    else if (tr.op == transaction::readd)
       begin
            if(tr.PSLVERR == 1'b1)
                 begin

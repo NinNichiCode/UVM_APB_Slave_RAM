@@ -6,9 +6,9 @@ class apb_ram_coverage extends uvm_subscriber#(transaction);
 covergroup cov_inst;
     // 1. 
     CP_OP: coverpoint trans.op {
-        bins read  = {readd};
-        bins write = {writed};
-        bins reset = {rst};
+        bins read  = {transaction::readd};
+        bins write = {transaction::writed};
+        bins reset = {transaction::rst};
     }
 
     // 2. 
@@ -20,7 +20,7 @@ covergroup cov_inst;
     // 3. Cross: addr for wr and rd
     X_RW_ADDR: cross CP_OP, CP_ADDR {
         // focus on cross forr readd and writed
-        ignore_bins reset_op = binsof(CP_OP) intersect {rst};
+        ignore_bins reset_op = binsof(CP_OP) intersect {transaction::rst};
         bins addr_error = binsof(CP_ADDR.invalid);
     }
 

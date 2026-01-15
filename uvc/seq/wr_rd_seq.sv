@@ -15,13 +15,15 @@ class wr_rd_seq extends uvm_sequence#(transaction); //////read after write
         tr.addr_c_err.constraint_mode(0);
         
         start_item(tr);
-        assert(tr.randomize);
-        tr.op = writed;
-        finish_item(tr);
+        assert(tr.randomize() with {
+            op == writed;
+        });
+        finish_item(tr);   
         
         start_item(tr);
-        assert(tr.randomize);
-        tr.op = readd;
+        assert(tr.randomize() with {
+            op == readd;
+        });
         finish_item(tr);
  
       end

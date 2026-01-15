@@ -16,9 +16,10 @@ class write_err_seq extends uvm_sequence#(transaction);
         tr.addr_c_err.constraint_mode(1);
         
         start_item(tr);
-        assert(tr.randomize);
-        tr.op = writed;
-        finish_item(tr);
+        assert(tr.randomize() with {
+            op == writed;
+        });
+        finish_item(tr);   
       end
   endtask
   

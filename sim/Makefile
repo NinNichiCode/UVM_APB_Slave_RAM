@@ -18,13 +18,16 @@ all: compile regress coverage summary
 compile:
 	vlib $(LIB)
 	vmap work $(LIB)
-	vlog -work work -sv -cover bcetf ../apb_ram.v ../tb/apb_if.sv $(INCDIRS) ../uvc/env/apb_ram_pkg.sv ../tb/top.sv
+	vlog -work work -sv -cover bcetf ../apb_ram.v ../tb/apb_if.sv
+	vlog -work work -sv $(INCDIRS) ../uvc/env/apb_ram_pkg.sv ../tb/top.sv
 
 regress:
 	@mkdir -p logs
 	@mkdir -p cov
 	@for t in $(TESTS); do \
-	vsim -c -coverage top +UVM_TESTNAME=$$t -voptargs="+acc" -l logs/$$t.log -do "coverage save -onexit cov/$$t.ucdb; run -all; quit -f"; \
+	vsim -c -coverage top +UVM_TESTNAME=$$t \
+	-voptargs="+acc" -assertdebug \
+	-l logs/$$t.log -do "coverage save -onexit cov/$$t.ucdb; run -all; quit";  \
 	done
 
 coverage:

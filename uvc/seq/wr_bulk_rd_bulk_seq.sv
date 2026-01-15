@@ -15,8 +15,9 @@ class wr_bulk_rd_bulk_seq extends uvm_sequence#(transaction);
         tr.addr_c_err.constraint_mode(0);
         
         start_item(tr);
-        assert(tr.randomize);
-        tr.op = writed;
+        assert(tr.randomize() with {
+            op == writed;
+        });
         finish_item(tr);
       
     end
@@ -27,8 +28,9 @@ class wr_bulk_rd_bulk_seq extends uvm_sequence#(transaction);
         tr.addr_c_err.constraint_mode(0);
         
         start_item(tr);
-        assert(tr.randomize);
-        tr.op = readd;
+        assert(tr.randomize() with {
+           op == readd;
+        });
         finish_item(tr);
       
     end

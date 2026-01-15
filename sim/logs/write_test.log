@@ -1,6 +1,7 @@
-# vsim -c -coverage top "+UVM_TESTNAME=write_test" -voptargs="+acc" -l logs/write_test.log -do "coverage save -onexit cov/write_test.ucdb; run -all; quit -f" 
-# Start time: 16:33:58 on Dec 23,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# vsim -c -coverage top "+UVM_TESTNAME=write_test" -voptargs="+acc" -assertdebug -l logs/write_test.log -do "coverage save -onexit cov/write_test.ucdb; run -all; quit" 
+# Start time: 17:26:42 on Jan 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "apb_ram(fast)".
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -411,5 +412,5 @@
 # ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 6110 ns  Iteration: 62  Instance: /top
 # Saving coverage database on exit...
-# End time: 16:34:06 on Dec 23,2025, Elapsed time: 0:00:08
+# End time: 17:26:51 on Jan 15,2026, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 0

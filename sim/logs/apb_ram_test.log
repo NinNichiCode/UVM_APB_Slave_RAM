@@ -1,5 +1,5 @@
-# vsim -c -coverage top "+UVM_TESTNAME=apb_ram_test" -voptargs="+acc" -l logs/apb_ram_test.log -do "coverage save -onexit cov/apb_ram_test.ucdb; run -all; quit -f" 
-# Start time: 16:34:59 on Dec 23,2025
+# vsim -c -coverage top "+UVM_TESTNAME=apb_ram_test" -voptargs="+acc" -assertdebug -l logs/apb_ram_test.log -do "coverage save -onexit cov/apb_ram_test.ucdb; run -all; quit" 
+# Start time: 17:27:35 on Jan 15,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
@@ -91,11 +91,21 @@
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 90: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(78) @ 110: uvm_test_top.env.a.d [DRV] mode:readd, addr:4294967295, wdata:3777248807, rdata:0, slverr:0
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 130 ns Started: 130 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 150 ns Started: 150 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(41) @ 170: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
 # ----------------------------------------------------------------
+# ** Warning: APB SVA: PRDATA is unknown during valid read
+#    Time: 170 ns Started: 170 ns  Scope: top.vif.a_prdata_valid_on_read File: ../tb/apb_if.sv Line: 60 Expr: ~$isunknown(prdata)
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 210: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(64) @ 230: uvm_test_top.env.a.d [DRV] mode:writed, addr:4294967295, wdata:4281818903, rdata:0, slverr:0
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 250 ns Started: 250 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 270 ns Started: 270 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(29) @ 290: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 330: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
@@ -107,8 +117,14 @@
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 390: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(78) @ 410: uvm_test_top.env.a.d [DRV] mode:readd, addr:4294967295, wdata:2337079852, rdata:0, slverr:0
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 430 ns Started: 430 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 450 ns Started: 450 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(41) @ 470: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
 # ----------------------------------------------------------------
+# ** Warning: APB SVA: PRDATA is unknown during valid read
+#    Time: 470 ns Started: 470 ns  Scope: top.vif.a_prdata_valid_on_read File: ../tb/apb_if.sv Line: 60 Expr: ~$isunknown(prdata)
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 510: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 530: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
@@ -118,6 +134,10 @@
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 570: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(64) @ 590: uvm_test_top.env.a.d [DRV] mode:writed, addr:4294967295, wdata:2518359749, rdata:0, slverr:0
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 610 ns Started: 610 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 630 ns Started: 630 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(29) @ 650: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 690: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
@@ -135,14 +155,22 @@
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(23) @ 810: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(64) @ 830: uvm_test_top.env.a.d [DRV] mode:writed, addr:4294967295, wdata:48946881, rdata:0, slverr:0
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 850 ns Started: 850 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 870 ns Started: 870 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(29) @ 890: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(78) @ 930: uvm_test_top.env.a.d [DRV] mode:readd, addr:0, wdata:3254385158, rdata:0, slverr:0
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(47) @ 990: uvm_test_top.env.s [SCO] DATA MATCHED : addr:0, rdata:0
 # ----------------------------------------------------------------
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(78) @ 1010: uvm_test_top.env.a.d [DRV] mode:readd, addr:4294967295, wdata:3524547497, rdata:0, slverr:0
+# ** Error: APB SVA: Invalid address but PSLVERR not asserted
+#    Time: 1030 ns Started: 1030 ns  Scope: top.vif.a_slverr_on_invalid_addr File: ../tb/apb_if.sv Line: 76 Expr: pslverr
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(41) @ 1050: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
 # ----------------------------------------------------------------
+# ** Warning: APB SVA: PRDATA is unknown during valid read
+#    Time: 1050 ns Started: 1050 ns  Scope: top.vif.a_prdata_valid_on_read File: ../tb/apb_if.sv Line: 60 Expr: ~$isunknown(prdata)
 # UVM_INFO ../uvc/env/apb_ram_driver.sv(78) @ 1090: uvm_test_top.env.a.d [DRV] mode:readd, addr:0, wdata:3483282630, rdata:0, slverr:0
 # UVM_INFO ../uvc/env/apb_ram_scoreboard.sv(47) @ 1150: uvm_test_top.env.s [SCO] DATA MATCHED : addr:0, rdata:0
 # ----------------------------------------------------------------
@@ -167,5 +195,5 @@
 # ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 1150 ns  Iteration: 62  Instance: /top
 # Saving coverage database on exit...
-# End time: 16:35:02 on Dec 23,2025, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 0
+# End time: 17:27:39 on Jan 15,2026, Elapsed time: 0:00:04
+# Errors: 11, Warnings: 3
