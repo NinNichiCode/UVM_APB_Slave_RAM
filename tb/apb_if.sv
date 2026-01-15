@@ -25,7 +25,7 @@ interface apb_if();
   logic        pready;
   logic        pslverr;
 
-  // // --- Clocking block (for UVM driver/monitor) ---
+  // 
   // clocking cb @(posedge pclk);
   //   default input #1step output #0;
   //   input  paddr, psel, penable, pwrite, pwdata, prdata, pready, pslverr;
@@ -38,9 +38,7 @@ interface apb_if();
   // modport monitor(input pclk, presetn,
   //                 paddr, psel, penable, pwrite, pwdata, prdata, pready, pslverr);
 
-  // ==================================================
-  // SVA: Protocol & Functional Checks
-  // ==================================================
+  // ================  SVA  =========================
 
   // P1: PENABLE must only be asserted after PSEL is high
   property p_penable_after_psel;
